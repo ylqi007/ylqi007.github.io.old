@@ -10,13 +10,13 @@ author:
 #  github: http://github.com/manutdzou
 
 # 站点信息
-title: 邹进屹的博客
+title: ylqi007's blog
 description: My personal blog
 url: http://ylqi007.github.io
 rss_url: /pages/atom.xml
 
 # gavatar头像及Favicon
-gavatar: /public/img/MS.JPG
+gavatar: /public/img/images_0.png
 favicon: /public/img/we2.jpg
 
 # google analytics 设置
