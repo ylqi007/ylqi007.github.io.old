@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 使用Tensorflow做Prisma图像风格迁移
-category: project
-tags: 深度学习
+category: test
+tags: deep learning
 keywords: 深度学习工程
 description: 
 ---
