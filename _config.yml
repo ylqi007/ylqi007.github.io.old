@@ -13,7 +13,7 @@ author:
 title: ylqi007's blog
 description: My personal blog
 url: http://ylqi007.github.io
-rss_url: /pages/atom.xml
+# rss_url: /pages/atom.xml
 
 # gavatar头像及Favicon
 gavatar: /public/img/images_0.png
