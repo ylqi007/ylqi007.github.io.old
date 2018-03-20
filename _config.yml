@@ -29,7 +29,7 @@ disqus:
   shortname: xiaohan
 
 # 主题设置，自动激活某个标签
-active: 科研
+active: DeepLearning
 
 # 首页除了最新文章外显示分类
 cates: 
