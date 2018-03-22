@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Lecture note 4: How to structure your model in TensorFlow
+title: Lecture note 4 How to structure your model in TensorFlow
 category: DeepLearning
 tags: TensorFlow
 ---
