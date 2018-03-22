@@ -11,6 +11,7 @@ I read through the whole doc, and keep some useful notes.
 [Tensorflow-Slim](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/slim#restoring-models-with-different-variable-names)
 TF-Slim is a lightweight library for defining, training and evaluating complex models in TensorFlow.
 
+---
 ## 1. Defining Models
 Models can be succinctly defined using TF-Slim by combining its **variables**, **layers** and **scopes**.
 
@@ -159,6 +160,7 @@ Training Tensorflow models requires **a model**, **a loss function**, **the grad
 
 TF-Slim provides an easy-to-use mechanism for defining and keeping track of loss functions via the [`losses`](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/contrib/losses/python/losses/loss_ops.py) module. 
 * A simple case to train the VGG network
+
 ```python
 import tensorflow as tf
 import tensorflow.contrib.slim.nets as nets
@@ -190,20 +192,16 @@ In this example, we have two losses which we add by calling `slim.losses.softmax
 ```
 # Load the images and labels.
 images, scene_labels, depth_labels, pose_labels = ...
-
 # Create the model.
 scene_predictions, depth_predictions, pose_predictions = CreateMultiTaskModel(images)
-
 # Define the loss functions and get the total loss.
 classification_loss = slim.losses.softmax_cross_entropy(scene_predictions, scene_labels)
 sum_of_squares_loss = slim.losses.sum_of_squares(depth_predictions, depth_labels)
 pose_loss = MyCustomLossFunction(pose_predictions, pose_labels)
 slim.losses.add_loss(pose_loss) # Letting TF-Slim know about the additional loss.
-
 # The following two ways to compute the total loss are equivalent:
 regularization_loss = tf.add_n(slim.losses.get_regularization_losses())
 total_loss1 = classification_loss + sum_of_squares_loss + pose_loss + regularization_loss
-
 # (Regularization Loss is included in the total loss by default).
 total_loss2 = slim.losses.get_total_loss()
 ```
@@ -220,7 +218,6 @@ g = tf.Graph()
 
 total_loss = slim.losses.get_total_loss()
 optimizer = tf.train.GradientDescentOptimizer(learning_rate)
-
 # create_train_op ensures that each time we ask for the loss, the update_ops
 # are run and the gradients being computed are applied too.
 train_op = slim.learning.create_train_op(total_loss, optimizer)
