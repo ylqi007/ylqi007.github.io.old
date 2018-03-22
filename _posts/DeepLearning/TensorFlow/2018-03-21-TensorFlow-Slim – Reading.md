@@ -163,30 +163,24 @@ TF-Slim provides an easy-to-use mechanism for defining and keeping track of loss
 import tensorflow as tf
 import tensorflow.contrib.slim.nets as nets
 vgg = nets.vgg
-
-# Load the images and labels.
+#Load the images and labels.
 images, labels = ...
-
-# Create the model.
+#Create the model.
 predictions, _ = vgg.vgg_16(images)
-
-# Define the loss functions and get the total loss.
+#Define the loss functions and get the total loss.
 loss = slim.losses.softmax_cross_entropy(predictions, labels)
 ```
 
 * A case with multi-task model that produces multiple outputs:
 ```python
-# Load the images and labels.
+#Load the images and labels.
 images, scene_labels, depth_labels = ...
-
 # Create the model.
 scene_predictions, depth_predictions = CreateMultiTaskModel(images)
-
-# Define the loss functions and get the total loss.
+#Define the loss functions and get the total loss.
 classification_loss = slim.losses.softmax_cross_entropy(scene_predictions, scene_labels)
 sum_of_squares_loss = slim.losses.sum_of_squares(depth_predictions, depth_labels)
-
-# The following two lines have the same effect:
+#The following two lines have the same effect:
 total_loss = classification_loss + sum_of_squares_loss
 total_loss = slim.losses.get_total_loss(add_regularization_losses=False)
 ```
