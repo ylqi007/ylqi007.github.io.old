@@ -159,7 +159,8 @@ Training Tensorflow models requires **a model**, **a loss function**, **the grad
 * For **regression problems**, this is often the sum-of-squares differences between the predicted and true values.
 
 TF-Slim provides an easy-to-use mechanism for defining and keeping track of loss functions via the [`losses`](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/contrib/losses/python/losses/loss_ops.py) module. 
-* A simple case to train the VGG network
+* A simple case to train the VGG network:
+
 
 ```python
 import tensorflow as tf
