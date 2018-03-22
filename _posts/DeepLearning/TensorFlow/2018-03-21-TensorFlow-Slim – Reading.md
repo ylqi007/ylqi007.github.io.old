@@ -1,8 +1,8 @@
 ---
 layout: post
-title: TensorFlow-Slim -- Reading Notes
-category: TensorFlow
-tags: "Deep-Learning"
+title: TensorFlow-Slim--Reading Notes
+category: DeepLearning
+tags: TensorFlow
 ---
 
 # TensorFlow-Slim -- Reading Notes
@@ -159,7 +159,7 @@ Training Tensorflow models requires **a model**, **a loss function**, **the grad
 
 TF-Slim provides an easy-to-use mechanism for defining and keeping track of loss functions via the [`losses`](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/contrib/losses/python/losses/loss_ops.py) module. 
 * A simple case to train the VGG network
-```
+```python
 import tensorflow as tf
 import tensorflow.contrib.slim.nets as nets
 vgg = nets.vgg
@@ -173,8 +173,9 @@ predictions, _ = vgg.vgg_16(images)
 # Define the loss functions and get the total loss.
 loss = slim.losses.softmax_cross_entropy(predictions, labels)
 ```
+
 * A case with multi-task model that produces multiple outputs:
-```
+```python
 # Load the images and labels.
 images, scene_labels, depth_labels = ...
 
