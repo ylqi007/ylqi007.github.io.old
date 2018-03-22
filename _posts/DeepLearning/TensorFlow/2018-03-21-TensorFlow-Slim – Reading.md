@@ -329,11 +329,11 @@ with tf.Session() as sess:
 ### 3.3 Restoring models with different variable names
 * When restoring variables from a checkpoint, the Saver locates the variable names in a checkpoint file and maps them to variables in the current graph. Above, we created a saver by passing to it a list of variables. In this case, the names of the variables to locate in the checkpoint file were implicitly obtained from each provided variable's var.op.name.
 * Sometimes, we want to restore a model from a checkpoint whose variables have different names to those in the current graph. In this case, we must provide the Saver a dictionary that maps from each checkpoint variable name to each graph variable. Consider the following example where the checkpoint variables names are obtained via a simple function:
+
 ```python
 # Assuming than 'cov1/weights' should be restored from 'vgg16/conv1/weights'
 def name_in_checkpoint(var):
   return 'vgg16/' + var.op.name
-
 # Assuming than 'conv1/weights' and 'conv1/bias' should be restored from 'conv1/params1' and 'conv1/params2'
 def name_in_checkpoint(var):
   if "weights" in var.op.name:
@@ -353,26 +353,21 @@ The code in line 13, creating a dictionary that maps from **each checkpoint vari
 
 ### 3.4 Fine-Tuning a Model on a different task
 Consider the case where we have a pre-trained VGG16 model. The model was trained on the ImageNet dataset, which has 1000 classes. However, we would like to apply it to the Pascal VOC dataset which has only 20 classes. To do so, we can *initialize our new model using the values of the pre-trained model* **excluding the final layer**:
+
 ```
 # Load the Pascal VOC data
 image, label = MyPascalVocDataLoader(...)
 images, labels = tf.train.batch([image, label], batch_size=32)
-
 # Create the model
 predictions = vgg.vgg_16(images)
-
 train_op = slim.learning.create_train_op(...)
-
 # Specify where the Model, trained on ImageNet, was saved.
 model_path = '/path/to/pre_trained_on_imagenet.checkpoint'
-
 # Specify where the new model will live:
 log_dir = '/path/to/my_pascal_model_dir/'
-
 # Restore only the convolutional layers:
 variables_to_restore = slim.get_variables_to_restore(exclude=['fc6', 'fc7', 'fc8'])
 init_fn = assign_from_checkpoint_fn(model_path, variables_to_restore)
-
 # Start training.
 slim.learning.train(train_op, log_dir, init_fn=init_fn)
 ```
