@@ -33,7 +33,7 @@ active: DeepLearning
 
 # 首页除了最新文章外显示分类
 cates: 
-  - Deep Learning
+  - DeepLearning
 
 # 中文本地化
 locals:
