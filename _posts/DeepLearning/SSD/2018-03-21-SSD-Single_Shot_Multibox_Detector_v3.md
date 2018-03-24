@@ -26,16 +26,16 @@ tags: "Deep-Learning"
 
 ---
 ## 2. The Single Shot Detector (SSD)
-![@Fig.1 SSD framework | center](1520629305225.png)
+![@Fig.1 SSD framework | center](/public/img/posts/SSD/SSD_framework.png)
 > In a convolutional fashion, we evaluate a small set (e.g. 4) of default boxes of different ascpect ratios at each location in several feature maps with both the shape offsets and the confidences for all object categores($(c_{1}, c_{2},...,c_{p})$).
 > At training time, we first match these default boxes to the ground truth boxes. In this sample image, we have matched two default boxes with the cat and dog, which are treated as positives and the rest as negatives. The model loss is a weighted sum between localization loss(e.g. Smooth L1) and confidence loss(e.g. Softmax).
 
 ### 2.1 Model
 > The SSD approach in based on a feed-forward convolutional network that produces a fixed-size collection of bounding boxes and scores for the presence of object class instances in those boxes, followed by a non-maximum suppression step to produce the final detections.
 > **base network** + **auxiliary structure** to produce detection with the following key features:
-> 1. **Multi-scale feature maps for detection.** We add convolutional feature layers to the end of the truncated base network. These layers decrease in size progressively and allow predictions of detections at multiple scales.
+> 1. **Multi-scale feature maps for detection.** Convolutional feature layers are added to the end of the truncated base network (VGG16). These layers decrease in size progressively and allow predictions of detections at multiple scales.
 > 2. **Convolutional predictors for derection.** Each added feature layer (or optionally an existing feature layer from the base network) can produce a fixed set of detection predictions using a set of convolutional filters.
-> 3. **Default boxes and aspect ratios.** We associate a set of default bounding boxes with **each feature map cell**, for multiple feature as the top the network. **The default boxes** tile the feature map **in a convolution manner**, so that the position of each box relative to its corresponding cell is fixed. At each feature map cell, we predict the **offsets** relative to the default box shapes in the cell, as well as the **per-class scores** that indicate the presence of a class instance in each of those boxes. Specaifically, for each box out of $k$ at a given location, we compute $c$ class scores and the 4 offsets relative to the original default box shape. The default boxes are similar to the $anchor boxes$ used in Faster R-CNN, however we apply them to several feature maps of different resolutions.
+> 3. **Default boxes and aspect ratios.** We associate a set of default bounding boxes with **each feature map cell**, for multiple feature as the top the network. **The default boxes** tile the feature map **in a convolution manner**, so that the position of each box relative to its corresponding cell is fixed. At each feature map cell, we predict the ***offsets*** relative to the default box shapes in the cell, as well as the ***per-class scores*** that indicate the presence of a class instance in each of those boxes. Specaifically, for each box out of $k$ at a given location, we compute $c$ class scores and the 4 offsets relative to the original default box shape. The default boxes are similar to the $anchor boxes$ used in Faster R-CNN, however we apply them to several feature maps of different resolutions.
 
 ### 2.2 Training
 > The key difference between training SSD and training a typical detetor that uses a region proposals, is that ground truth information needs to be assigned to specific outputs in the fixed set of detector outputs.
@@ -89,3 +89,15 @@ $$
 
 ---
 ## Acknowledgment
+
+---
+
+---
+## [Single Shot MultiBox Detector](https://towardsdatascience.com/understanding-ssd-multibox-real-time-object-detection-in-deep-learning-495ef744fab)
+This paper was released at the end of November 2016 and reached new records in terms of performance and precision for object detection tasks.
+* **Single Shot:** this means that the tasks of object localization and classification are done in a *single forward pass* of the network.
+* **MultiBox:** this is the name of a technique of bounding box regression developed by Szegedy et al.
+* **Detector:** The network is an object detector that also classifies those detected objects.
+
+#### Non-Maximum Suppression (NMS)
+Given the large number of boxes generated during a forward pass of SSD at inference time, it is essential to prune most of the bounding box by applying a technique called *non-maximum suppression*: boxes with a confidence loss threshold less than ct (e.g. 0.01) and IoU less than lt (e.g. 0.45) are discard, and only the top *N* predictions are kept. This ensures only the most likely predictions are retained by the network, while the more noisier ones are removed.
