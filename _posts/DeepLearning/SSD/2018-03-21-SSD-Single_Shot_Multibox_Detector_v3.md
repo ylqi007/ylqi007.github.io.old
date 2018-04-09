@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SSD-Single_Shot_Multibox_Detector 阅读笔记_v3
-category: DeepLearning
+category: 深度学习
 tags: "Deep-Learning"
 ---
 

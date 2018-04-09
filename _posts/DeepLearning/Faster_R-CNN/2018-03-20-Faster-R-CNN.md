@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Faster R-CNN 阅读笔记
-category: DeepLearning
+category: 深度学习
 tags: "Deep-Learning"
 ---
 

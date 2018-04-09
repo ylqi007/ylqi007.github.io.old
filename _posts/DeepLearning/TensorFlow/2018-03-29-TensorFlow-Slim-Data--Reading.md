@@ -1,7 +1,7 @@
 ---
 layout: post
 title: TensorFlow-Slim-Data--Reading
-category: DeepLearning
+category: 深度学习
 tags: TensorFlow
 ---
 

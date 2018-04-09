@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Reinforcement Learning
-category: MachineLearning
-tags: 机器学习
+category: 机器学习
+tags: "Machine-Learning"
 ---
 ![p_1](/public/img/posts/MachineLearning/Chap16_Reinforcement_Learning/page_1.jpg)
 ![p_2](/public/img/posts/MachineLearning/Chap16_Reinforcement_Learning/page_2.jpg)
