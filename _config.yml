@@ -29,11 +29,11 @@ disqus:
   shortname: xiaohan
 
 # 主题设置，自动激活某个标签
-active: DeepLearning
+active: 深度学习
 
 # 首页除了最新文章外显示分类
 cates: 
-  - DeepLearning
+  - 深度学习
 
 # 中文本地化
 locals:
