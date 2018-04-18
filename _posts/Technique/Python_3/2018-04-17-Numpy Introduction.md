@@ -15,7 +15,7 @@ SciPy (Scientific Python) is often mentioned in the same breath with NumPy. SciP
 Both NumPy and SciPy are usually not installed by default. NumPy has to be installed before installing SciPy. 
 
 Python in combination with Numpy, Scipy and Matplotlib can be used as a replacement for MATLAB.
-![Alt text|center](/public/img/posts/python_3_tutorial/NumpyIntroduction/pic_1.png)
+![Alt text | center](/public/img/posts/python_3_tutorial/NumpyIntroduction/pic_1.png)
 
 ## 1. Comparison between Core Python and Numpy
 When we say "Core Python", we mean Python without any special modules, i.e. especially without NumPy.
@@ -55,7 +55,7 @@ print(fvalues)
 ## 3. Memory Consumption: ndarray and list
 The main benefits of using numpy array should be smaller memory consumption and better runtime behaviour.
 
-![Alt text|center](/public/img/posts/python_3_tutorial/NumpyIntroduction/pic_2.png)
+![Alt text | center](/public/img/posts/python_3_tutorial/NumpyIntroduction/pic_2.png)
 
 To calculate the memory consumption of the list from the above picture, we can use the function `getsizeof` from the module `sys`.
 
@@ -84,7 +84,7 @@ For every new element, we need another eight bytes for the reference to the new 
 
 The memory consumption of a `numpy.array`.
 
-![Alt text|center](/public/img/posts/python_3_tutorial/NumpyIntroduction/pic_3.png)
+![Alt text | center](/public/img/posts/python_3_tutorial/NumpyIntroduction/pic_3.png)
 
 We can create the numpy array of the previous diagram and calculate the memory usage:
 
