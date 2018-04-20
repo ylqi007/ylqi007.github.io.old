@@ -101,7 +101,7 @@ Multiplication with broadcasting:
 
 The following diagram illustrates the way of working of broadcasting:
 
-![pic_1 | center](/public/img/posts/python_3_tutorial/NumpyOperations/pic_1.png)
+![Alt text | center](/public/img/posts/python_3_tutorial/NumpyOperations/pic_1.png)
 
 2. The Second Example:
 
@@ -126,7 +126,7 @@ Now we are capable of doing the multiplication using broadcasting:
 A * B[:, np.newaxis]
 ```
 
-![pic_2 |center](/public/img/posts/python_3_tutorial/NumpyOperations/pic_2.png)
+![Alt text | center](/public/img/posts/python_3_tutorial/NumpyOperations/pic_2.png)
 
 3. The Third Example:
 
@@ -156,7 +156,7 @@ array([[10, 20, 30],
        [30, 60, 90]])
 ```
 
-![pic_3 | center](/public/img/posts/python_3_tutorial/NumpyOperations/pic_3.png)
+![Alt text | center](/public/img/posts/python_3_tutorial/NumpyOperations/pic_3.png)
 
 ### 2. Another Way to Do it
 1. Doing it without broadcasting:
