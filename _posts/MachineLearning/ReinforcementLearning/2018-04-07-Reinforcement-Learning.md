@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Reinforcement Learning
+title: Chapter 16--Reinforcement Learning
 category: 机器学习
 tags: "Machine-Learning"
 ---

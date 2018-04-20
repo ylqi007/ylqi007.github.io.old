@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Decision Tree
+title: Chapter 4--Decision Tree
 category: 机器学习
 tags: "Machine-Learning"
 ---

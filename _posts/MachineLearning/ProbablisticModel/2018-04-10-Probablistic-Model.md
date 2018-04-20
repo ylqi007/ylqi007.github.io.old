@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Probablistic Model
+title: Chapter 14--Probablistic Model
 category: 机器学习
 tags: "Machine-Learning"
 ---
