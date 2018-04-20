@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Introduction
+title: Chap 1--Introduction
 category: 机器学习
 tags: "Machine-Learning"
 ---
