@@ -25,14 +25,18 @@ Result (4d array):  8 x 7 x 6 x 5
 > From the above example, lining up the sizes of the trailing axes of these arrays according to the broadcast rules. The last dimensions of `A` and `B` are 1 and 5 separately, therefore the length of this dimension broadcast to the larger one, which is 5. The same for the second from last dimensions that will broadcast to 6, and the third from the last to 7.
 
 ![Alt text](/public/img/posts/python_3_tutorial/NumpyBroadcasting/fig_1.png)
+
 Figure 1: In the simplest example of broadcasting, the scalar `b` is stretched to become an array of with the same shape as `a` so the shapes are compatible for element-by-element multiplication.
 
 ![Alt text](/public/img/posts/python_3_tutorial/NumpyBroadcasting/fig_2.png)
+
 Figure 2: A two dimensional array multiplied by a one dimensional array results in broadcasting if number of 1-d array elements matches the number of 2-d array columns.
 
 ![Alt text](/public/img/posts/python_3_tutorial/NumpyBroadcasting/fig_3.png)
+
 Figure 3: When the trailing dimensions of the arrays are unequal, broadcasting fails because it is impossible to align the values in the rows of the 1st array with the elements of the 2nd arrays for element-by-element addition. 
 
 ![Alt text](/public/img/posts/python_3_tutorial/NumpyBroadcasting/fig_4.png)
+
 Figure 4: In some cases, broadcasting stretches both arrays to form an output array larger than either of the initial arrays. 
 
