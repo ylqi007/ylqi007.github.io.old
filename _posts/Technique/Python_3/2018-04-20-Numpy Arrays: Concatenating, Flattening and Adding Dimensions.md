@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Numpy Arrays\:Concatenating, Flattening and Adding Dimensions
+title: Numpy Arrays:Concatenating, Flattening and Adding Dimensions
 category: Technique
 tags: "Python-3-Tutorial"
 ---
