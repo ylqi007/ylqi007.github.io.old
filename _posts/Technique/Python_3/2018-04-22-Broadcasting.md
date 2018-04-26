@@ -40,3 +40,4 @@ Figure 3: When the trailing dimensions of the arrays are unequal, broadcasting f
 
 Figure 4: In some cases, broadcasting stretches both arrays to form an output array larger than either of the initial arrays. 
 
+[reference](http://scipy.github.io/old-wiki/pages/EricsBroadcastingDoc)
