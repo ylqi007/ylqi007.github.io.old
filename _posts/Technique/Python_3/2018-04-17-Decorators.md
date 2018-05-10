@@ -10,10 +10,10 @@ Two different kinds of decorators in Python:
 * Function decorators
 * Class decorators
 
-A decorator in Python is any callable Python object that is used to modify a function or a class. A reference to a function "func" or a class "C" is passed to a decorator and the decorator returns a modified function or class. The modified functions or classes usually contain calls to the original function "func" or class 'C'.
+A decorator in Python is any callable Python object **that is used to modify a function or a class**. **A reference** to a function "func" or a class "C" is passed to a decorator and the decorator returns a modified function or class. The modified functions or classes usually contain calls to the original function "func" or class 'C'.
 
 ## First Steps to Decorators
-First we have to know or remember that function names are references to functions and that we can assign multiple names to the same function:
+First we have to know or remember that **function names are references to functions** and that **we can assign multiple names to the same function**:
 
 ```python
 >>> def succ(x):
@@ -26,9 +26,9 @@ First we have to know or remember that function names are references to function
 11
 ```
 
-This means that we have two names, i.e. "succ" and "successor" for the same function.
+	* We have two names, i.e. "succ" and "successor" for the same function.
+	* We can delete either "succ" or "successor" without deleting the function itself, as following snippet code shows below
 
-The next import fact is that we can delete either "succ" or "successor" without deleting the function itself.
 
 ```python
 >>> del succ
@@ -67,7 +67,7 @@ print(temperature(20))
 ```
 
 ## Functions as Parameters
-Due to the fact that every parameter of a function is a reference to an object and functions are objects as well, we can pass functions -or better "references to functions"- as parameters to a function.
+Due to the fact that **every parameter of a function is a reference to an object** and **functions are objects as well**, we can pass functions -or better "references to functions"- as parameters to a function.
 
 ```python
 def g():
@@ -85,10 +85,12 @@ f(g)
 Sometimes, we need to know what the 'real' name of func is. For this purpos, we can use the attribute `__name__`, as it contains this name.
 
 ## Functions returning Functions
-The output of a function is also a reference to an object. Therefore functions can return references to function objects.
+**The output of a function is also a reference to an object.** Therefore functions can return references to function objects.
 
 [polynomial "factory" function](https://www.python-course.eu/python3_decorators.php)
 [Polynomials](https://www.python-course.eu/polynomial_class_in_python.php)
+
+---
 
 ## A Simple Decorator
 
