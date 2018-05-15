@@ -2,7 +2,7 @@
 layout: post
 title: Lecture_3 -- Linear and Logistic Regression
 category: 深度学习
-tags: TensorFlow, CS20
+tags: TensorFlow CS20
 ---
 
 # Lecture 3: Linear and Logistic Regression in TensorFlow

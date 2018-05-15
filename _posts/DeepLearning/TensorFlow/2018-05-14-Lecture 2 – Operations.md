@@ -2,7 +2,7 @@
 layout: post
 title: Lecture_2 -- Operations
 category: 深度学习
-tags: TensorFlow, CS20
+tags: TensorFlow CS20
 ---
 
 # Lecture 2 -- Operations

@@ -2,7 +2,7 @@
 layout: post
 title: Lecture_1 -- Introduction to TensorFlow
 category: 深度学习
-tags: TensorFlow, CS20
+tags: TensorFlow CS20
 ---
 
 # Lecture 1: Introduction to Tensorflow
