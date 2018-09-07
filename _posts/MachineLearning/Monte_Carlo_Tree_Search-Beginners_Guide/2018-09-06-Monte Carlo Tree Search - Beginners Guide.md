@@ -17,7 +17,7 @@ tags: "Machine-Learning"
 ## 1.2 Monte Carlo Tree Seach
 > From a helicopter view Monte Carlo Tree Search has one main purpose: given a **game state** to choose **the most promising next move**.
 
-![Game Definition](/_posts/MachineLearning/Monte_Carlo_Tree_Search-Beginners_Guide/equation1.png)
+![Game Definition](/public/img/posts/MachineLearning/MCTS/equation1.png)
 
 **game tree**, **state**, **node**, **move**, **branching factor**
 
@@ -48,14 +48,14 @@ tags: "Machine-Learning"
 
 ## 2.3 Game Tree Traversal
 
-![MCTS Tree](/_posts/MachineLearning/Monte_Carlo_Tree_Search-Beginners_Guide/mstc_tree.png)
+![MCTS Tree](/public/img/posts/MachineLearning/MCTS/mstc_tree.png)
 
 > Our current node – marked blue – is fully expanded so it must have been visited and so stores its node statistics: total simulation reward and total number of visits, same applies to its children. These values are compounds of our last piece: **Upper Confidence Bound applied to trees or shortly UCT**
 
 ## 2.4 Upper Confidence Bound applied to trees
 > UCT is a function that lets us choose the next node among visited nodes to traverse through – the core function of Monte Carlo Tree Search
 
-![UCT function](/_posts/MachineLearning/Monte_Carlo_Tree_Search-Beginners_Guide/uct.png)
+![UCT function](/public/img/posts/MachineLearning/MCTS/uct.png)
 
 > **Node maximizing UCT is the one to follow** during Monte Carlo Tree Search tree traversal. Let’s see what UCT function does:
 > First of all our function is defined for a child node vi of a node v. It is a sum of two components – the first component of our function $\frac{Q(vi)}{N(vi)}$, also called **exploitation component**, can be read as a winning/losing rate – we have total simulation reward divided by total number of visits which etimates win ratio in the node vi. This already looks promising – at the end of the day we might want to traverse through the nodes that have high winning rate.
