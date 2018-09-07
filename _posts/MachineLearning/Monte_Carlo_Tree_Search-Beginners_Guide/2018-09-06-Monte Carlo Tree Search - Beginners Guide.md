@@ -48,7 +48,7 @@ tags: "Machine-Learning"
 
 ## 2.3 Game Tree Traversal
 
-![MCTS Tree](/public/img/posts/MachineLearning/MCTS/mstc_tree.png)
+![MCTS Tree](/public/img/posts/MachineLearning/MCTS/mcts_tree.png)
 
 > Our current node – marked blue – is fully expanded so it must have been visited and so stores its node statistics: total simulation reward and total number of visits, same applies to its children. These values are compounds of our last piece: **Upper Confidence Bound applied to trees or shortly UCT**
 
