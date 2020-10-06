@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="R-CNN">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/_posts/DeepLearning/R-CNN.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
