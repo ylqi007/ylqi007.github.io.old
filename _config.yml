@@ -1,43 +1,18 @@
-permalink: /:year/:month/:day/:title.html
-paginate: 10
-markdown: kramdown
+title: ylqi007
+lang: en
+description: Write an awesome description for your new site here
 
-# 作者信息
-author: 
-  name: Yunlong Qi
-  email: ylqi007@126.com
-  link: http://ylqi007.github.io
-  github: http://github.com/ylqi007
+remote_theme: rundocs/jekyll-rtd-theme
 
-# 站点信息
-title: ylqi007's blog
-description: My personal blog
-url: http://ylqi007.github.io
-# rss_url: /pages/atom.xml
+readme_index:
+  with_frontmatter: true
 
-# gavatar头像及Favicon
-gavatar: /public/img/images_0.png
-favicon: /public/img/images_0.png
+exclude:
+  - Makefile
+  - Gemfile
+  - Gemfile.lock
 
-# google analytics 设置
-ga:
-#  id: UA-54262064-1 
-  url: http://ylqi007.github.io
-  
-# disqus 设置
-disqus:
-  shortname: xiaohan
-
-# 主题设置，自动激活某个标签
-active: 深度学习
-
-# 首页除了最新文章外显示分类
-cates: 
-  - 深度学习
-
-# 中文本地化
-locals:
-  tags: 标签
-  about: 关于
-  newest: 最新文章
-  archive: 归档
+plugins:
+  - jemoji
+  - jekyll-avatar
+  - jekyll-mentions
