@@ -8,3 +8,7 @@ This a draft version of my personal page.
 - [ ] Change the theme to [jekyll-rtd-theme](https://github.com/rundocs/jekyll-rtd-theme)
 - [ ] 有没有可能尝试自己也做一个 theme，等下载量上去了，可以考虑收费呢？嘿嘿嘿嘿嘿嘿
 
+category1/file1.md
+category1/file2.md
+category1/file3.md
+category1/README.md
