@@ -1,6 +1,6 @@
-title: ylqi007
+title: RunDocs
 lang: en
-description: Write an awesome description for your new site here
+description: Extends the continuous integration documentation capabilities of GitHub pages for everyone!
 
 remote_theme: rundocs/jekyll-rtd-theme
 
@@ -9,10 +9,6 @@ readme_index:
 
 exclude:
   - Makefile
+  - CNAME
   - Gemfile
   - Gemfile.lock
-
-plugins:
-  - jemoji
-  - jekyll-avatar
-  - jekyll-mentions
