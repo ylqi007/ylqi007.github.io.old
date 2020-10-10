@@ -1,5 +1,12 @@
 ---
+sort: 1
 ---
-# TEST
 
-# Algorithm
+# Docs Documentation
+
+```
+{% raw %}{% include list.liquid all=true %}{% endraw %}
+```
+
+{% include list.liquid all=true %}
+
