@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Three normal forms of SQL
 category: Database
 tags: "SQL"
